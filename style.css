@@ -1,0 +1,169 @@
+:root {
+    --textColorRGB: 40, 40, 40;
+    --textColor: rgb(40, 40, 40);
+    --backgroundColor: rgba(247, 247, 247,.8);
+    --keyColor: rgb(54, 124, 247);
+    --keyColorRGB: 54, 124, 247;
+    --hoverColor: rgb(0, 165, 184);
+
+    --link-decoration: underline solid rgba(var(--keyColorRGB), .4) .01em;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font: 16px/1.35 "Forma DJR Cyrillic Micro", sans-serif;
+    /* hyphens: auto; */
+
+    width: 70%;
+    margin: 0 auto;
+
+    @media screen and (max-width: 768px) {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 .5em;
+    }
+}
+
+a {
+    color: rgb(var(--keyColorRGB));
+    text-decoration: var(--link-decoration);
+    text-underline-offset: .2em;
+    text-decoration-skip: none;
+    text-decoration-skip-ink: none;
+}
+
+a:hover {
+    color: var(--hoverColor);
+    text-decoration-thickness: .1em;
+    text-decoration-color: currentColor;
+} 
+
+.item a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+a h2, p {
+    color: var(--textColor);
+}
+
+
+img {
+    margin-bottom: .5em;
+    width: 100%;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: .4em;
+    line-height: 1.15em;
+}
+
+h2 {
+    font-size: 1.7em;
+    line-height: 1.2em;
+    font-weight: 500;
+    margin-bottom: .4rem;
+    /* overflow-wrap: break-word; */
+}
+
+p {
+    margin-bottom: .4em;
+}
+
+header {
+    display: flex;
+    flex-flow: nowrap row;
+    justify-content: space-between;
+}
+
+.cardContainer {
+    display: grid;
+    grid-template-rows: min-content; 
+    grid-template-columns: repeat(6, 1fr); 
+    gap: 1em 1em;
+}
+
+.largeSize {
+    grid-column: span 4;
+}
+
+.smallSize {
+    grid-column: span 2;
+    font-size: .8em;
+}
+
+.regularSize {
+    grid-column: span 3;
+}
+
+.button {
+    display: block;
+    font-weight: 400;
+    background-color: var(--textColor);
+    color: rgb(238, 238, 238);
+    font-size: 1.2em;
+    max-width: 100%;
+    padding: .5em 1em;
+    text-decoration: none;
+    white-space: normal;
+    border-radius: .2em;
+    margin-bottom: 1em;
+}
+
+a:hover .button {
+    background-color: var(--keyColor);
+}
+
+
+.coming h2::before {
+    content: "Скоро";
+    position: relative;
+    color: rgb(var(--textColorRGB));
+    font-size: .5em;
+    font-weight: 400;
+    padding: 0 .3em;
+    bottom: .3em;
+    margin-right: .3em;
+    border: 1px solid rgb(var(--textColorRGB));
+    border-radius: .2em;
+}
+
+.coming a {
+    text-decoration: none;
+}
+
+.lead {
+    font-size: 1.3em;
+}
+
+.extraContainer {
+    display: flex;
+    flex-flow: wrap row;
+    padding: .3em 0;
+    position: relative;
+    margin-bottom: 2em;
+}
+
+.extraContainer::before {
+    border-top: 1px solid rgb(var(--textColorRGB), 8%);
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.extraItem {
+    padding-right: 1em;
+    padding-bottom: 1.3em;
+    width: calc(100%/2 - 1em);
+}
+
+.extraItem p {
+    margin-bottom: .4em;
+    font-size: em;
+}
