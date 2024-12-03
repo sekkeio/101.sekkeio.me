@@ -7,6 +7,10 @@
     --hoverColor: rgb(0, 165, 184);
 
     --link-decoration: underline solid rgba(var(--keyColorRGB), .4) .01em;
+
+    --icon-size: 6rem;
+
+    --font-serif: "Alegreya", serif;
 }
 
 * {
@@ -37,9 +41,12 @@ a {
 
 a:hover {
     color: var(--hoverColor);
-    text-decoration-thickness: .1em;
     text-decoration-color: currentColor;
 } 
+
+img {
+    width: 100%;
+}
 
 .item a {
     text-decoration: none;
@@ -51,15 +58,11 @@ a h2, p {
 }
 
 
-img {
-    margin-bottom: .5em;
-    width: 100%;
-}
-
 h1 {
-    font-size: 2em;
+    font-size: 2.8em;
     margin-bottom: .4em;
     line-height: 1.15em;
+    font-weight: 500;
 }
 
 h2 {
@@ -67,40 +70,103 @@ h2 {
     line-height: 1.2em;
     font-weight: 500;
     margin-bottom: .4rem;
-    /* overflow-wrap: break-word; */
 }
+
+.smallSize h2,
+.regularSize h2 {
+    font-size: 1.3em;
+}
+h3 {
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+.item h2 {
+    margin-bottom: .16em;
+    line-height: 1em;
+    /* margin: 0; */
+}
+
 
 p {
     margin-bottom: .4em;
+}
+
+.item p {
+    font-size: .95em;
+}
+
+.fullSize p {
+    width: 70%;
+}
+
+.stack.L {
+    margin-top: 2em;
 }
 
 header {
     display: flex;
     flex-flow: nowrap row;
     justify-content: space-between;
+    padding: 1em 0 0;
+    border-bottom: .1em solid rgb(var(--keyColorRGB), 10%);
+    padding-bottom: .4em;
+}
+
+header a {
+    text-decoration: none;
+    color: rgb(var(--textColorRGB));
+}
+
+.active {
+    text-decoration: underline solid rgba(var(--keyColorRGB), .4) .01em;;
+    text-underline-offset: .8em;
+    text-decoration-thickness: .1em;
+    text-decoration-color: var(--keyColor);
+    color: var(--keyColor);
+    font-weight: 600;
+}
+
+.groupHeader {
+    display: flex;
+    flex-flow: nowrap row;
+    gap: 1em;
+}
+
+.textContainer {
+    width: 85%;
+    margin: 0 auto;
 }
 
 .cardContainer {
     display: grid;
     grid-template-rows: min-content; 
-    grid-template-columns: repeat(6, 1fr); 
+    grid-template-columns: repeat(5, 1fr); 
     gap: 1em 1em;
+    align-items: start;
+    margin-bottom: 5em;
+}
+
+
+
+.fullSize {
+    grid-column: span 5;
 }
 
 .largeSize {
     grid-column: span 4;
 }
 
-.smallSize {
-    grid-column: span 2;
-    font-size: .8em;
-}
-
 .regularSize {
-    grid-column: span 3;
+    grid-column: span 2;
 }
 
-.button {
+.smallSize {
+    grid-column: span 1;
+    /* font-size: .8em; */
+}
+
+.button, button {
     display: block;
     font-weight: 400;
     background-color: var(--textColor);
@@ -114,7 +180,9 @@ header {
     margin-bottom: 1em;
 }
 
-a:hover .button {
+a:hover .button,
+a:hover button,
+button:hover {
     background-color: var(--keyColor);
 }
 
@@ -145,7 +213,7 @@ a:hover .button {
     flex-flow: wrap row;
     padding: .3em 0;
     position: relative;
-    margin-bottom: 2em;
+    /* margin-bottom: 2em; */
 }
 
 .extraContainer::before {
@@ -166,4 +234,55 @@ a:hover .button {
 .extraItem p {
     margin-bottom: .4em;
     font-size: em;
+}
+
+.imageContainer {
+    margin-bottom: .5em;
+    width: 100%;
+    border-radius: .4em;
+    overflow: hidden;
+}
+
+.item.locked .imageContainer {
+    position: relative;
+    overflow: hidden;
+}
+
+.item.locked .imageContainer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.item.locked .imageContainer::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: var(--icon-size);
+    height: var(--icon-size);
+    background: url('/icons/lock.svg') no-repeat center;
+    background-size: contain;
+}
+
+
+
+.cardExtra {
+    opacity: 0;
+    display: flex;
+    column-gap: .7em;
+    color: rgb(var(--textColorRGB), 80%);
+    /* font-family: var(--font-serif); */
+    margin-bottom: .5em;
+    transition: ease .3s;
+    font-size: .8rem;
+}
+
+.item:hover .cardExtra {
+    opacity: 1;
 }
