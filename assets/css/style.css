@@ -62,15 +62,18 @@ a {
     text-underline-offset: .2em;
     text-decoration-skip: none;
     text-decoration-skip-ink: none;
+    transition: color .5s ease;
 }
 
 a:hover {
     color: var(--hoverColor);
     text-decoration-color: currentColor;
+    transition: color .0s ease;
 } 
 
 img {
     width: 100%;
+    transition: filter .5s ease;
 }
 
 .item a {
@@ -276,9 +279,17 @@ button:hover {
 
 .imageContainer {
     margin-bottom: .5em;
+    margin-bottom: .8em;
     width: 100%;
     border-radius: .4em;
     overflow: hidden;
+    transform: rotate(-.9deg);
+    transition: transform .5s ease;
+}
+
+.imageContainer:hover {
+    transform: none;
+    transition: transform 0s ease;
 }
 
 .item.locked .imageContainer {
@@ -308,6 +319,9 @@ button:hover {
     background-size: contain;
 }
 
+.item.locked .imageContainer img {
+    filter: none;
+}
 
 
 .cardExtra {
@@ -323,4 +337,11 @@ button:hover {
 
 .item:hover .cardExtra {
     opacity: 1;
+}
+
+.imageContainer:hover img {
+    filter: brightness(120%) contrast(95%);
+    transition: filter .0s ease;
+}
+
 }
