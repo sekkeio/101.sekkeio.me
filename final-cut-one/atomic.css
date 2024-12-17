@@ -1,0 +1,74 @@
+
+
+/* margin bottom */
+
+.b-02 {
+    margin-bottom: .25rem;
+}
+
+.b-05 {
+    margin-bottom: .5rem;
+}
+
+.b-07 {
+    margin-bottom: .75rem;
+}
+
+.b-1 {
+    margin-bottom: 1rem;
+}
+
+.b-12 {
+    margin-bottom: 1.25rem;
+}
+
+.b-15 {
+    margin-bottom: 1.5rem;
+}
+
+.b-17 {
+    margin-bottom: 1.75rem;
+}
+
+.b-2 {
+    margin-bottom: 2rem;
+}
+
+.b-22 {
+    margin-bottom: 2.25rem;
+}
+
+.b-25 {
+    margin-bottom: 2.5rem;
+}
+
+.b-27 {
+    margin-bottom: 2.75rem;
+}
+
+.b-3 {
+    margin-bottom: 3rem;
+}
+
+
+/* text style */
+
+.t-lead {
+    font-size: 2rem;
+    line-height: 1.2;
+}
+
+
+/* mark style */
+
+.mark_red {
+    background-color: rgba(255, 0, 0, 0.17);
+}
+
+.mark_yellow {
+    background-color: rgb(255, 235, 83);
+}
+
+.mark_green {
+    background-color: rgba(0, 128, 0, 0.17);
+}
