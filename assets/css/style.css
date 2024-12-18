@@ -1,22 +1,28 @@
 /* Font */
-
 @font-face {
-    font-family: Forma DJR Cyr;
-    font-weight: 700;
-    src: url(../../assets/fonts/FormaDJRCyrillicMicro-Bold.woff2) format("woff2")
+    font-family: Forma DJR;
+    font-weight: 200;
+    src: url(../../assets/fonts/FormaDJRCyrillicDisplay-ExtraLight.woff2) format("woff2")
 }
 
 @font-face {
-    font-family: Forma DJR Cyr;
-    font-weight: 500;
-    src: url(../../assets/fonts/FormaDJRCyrillicMicro-Medium.woff2) format("woff2")
-}
-
-@font-face {
-    font-family: Forma DJR Cyr;
+    font-family: Forma DJR;
     font-weight: 400;
-    src: url(../../assets/fonts/FormaDJRCyrillicMicro-Regular.woff2) format("woff2")
+    src: url(../../assets/fonts/FormaDJRCyrillicDisplay-Regular.woff2) format("woff2")
 }
+
+@font-face {
+    font-family: "Forma DJR";
+    font-weight: 700;
+    src: url(../../assets/fonts/FormaDJRCyrillicDisplay-Bold.woff2) format("woff2")
+}
+
+@font-face {
+    font-family: "Red Ring TExt";
+    font-weight: 400;
+    src: url(../../assets/fonts/RedRing-Regular.woff2) format("woff2")
+}
+
 
 
 
@@ -33,11 +39,11 @@
 
     --icon-size: 50%;
 
-    --font-accent: "Forma DJR Cyrillic Text", sans-serif;
+    --font-accent: "Forma DJR", sans-serif;
 
     --bold: 700;
     --medium: 500;
-    font: 16px/1.2 "Red Ring", system-ui, sans-serif;
+    font: 16px/1.2 "Red Ring Text", system-ui, sans-serif;
 }
 
 * {
@@ -374,7 +380,7 @@ button:hover {
 .courses-title_h1 {
     font-family: var(--font-accent);
     font-size: 7em;
-    font-weight: 100;
+    font-weight: 200;
     line-height: .9;
 }
 
@@ -382,6 +388,7 @@ button:hover {
     font-size: 1.6em;
     line-height: 1.2;
     padding-right: 5em;
+    font-weight: 550;
 }
 
 
