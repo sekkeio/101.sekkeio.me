@@ -72,3 +72,10 @@
 .mark_green {
     background-color: rgba(0, 128, 0, 0.17);
 }
+
+.tform-left {
+    transform: rotate(-1deg);
+}
+.tform-right {
+    transform: rotate(1deg);
+}

@@ -439,10 +439,13 @@ button:hover {
 }
 
 .reviews-item {
+    display: flex;
+    flex-flow: column;
+    gap: .5em;
+    /* justify-content: space-between; */
     width: calc(100%/3 - .75em);
-    border-top: 1px solid wheat;
-    border-left: 1px solid wheat;
-    padding: .3em 1.5em 1em .5em;
+    padding: .3em 1.5em 0 .5em;
+    background-color: rgb(var(--keyColorRGB), .05);
 }
 .reviews-item.L {
     width: calc(66% - .75em);
@@ -508,4 +511,26 @@ button:hover {
 
 .purchase-form_caption {
     font-size: .9em;
+}
+
+
+.features-item {
+    display: flex;
+    flex-flow: row nowrap;
+    flex-basis: 0;
+}
+
+.features-item-wrapper {
+    flex-grow: 4;
+    flex-basis: 0;
+}
+
+.features-item-wrapper_img {
+    flex-grow: 8;
+    flex-basis: 0;
+    overflow: visible;
+}
+
+.features-item-wrapper_img img {
+    transform: scale(180%);
 }
